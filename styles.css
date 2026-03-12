@@ -599,6 +599,179 @@ hr {
 }
 
 
+/* Placeholder cards projets */
+.placeholder-card {
+  background: #f8f9ff;
+  border: 2px dashed #c7d2fe;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 160px;
+  background: #e0e7ff;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+}
+
+.skill-tag {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #1e3a8a;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin: 3px;
+}
+
+.btn-disabled {
+  background: #9ca3af;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Certifications */
+.certifications {
+  margin: 160px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.certifications p {
+  padding-bottom: 20px;
+  font-size: 13px;
+  color: rgb(50, 50, 50);
+}
+
+.certifications h1 {
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 10px;
+}
+
+.certifications hr {
+  width: 10%;
+}
+
+.certif-container {
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+.certif-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: 0.3s ease;
+}
+
+.certif-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.placeholder-certif {
+  background: #f8f9ff;
+  border: 2px dashed #c7d2fe;
+  opacity: 0.7;
+}
+
+.certif-icon {
+  background: #e0e7ff;
+  color: #4f46e5;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certif-body {
+  flex: 1;
+}
+
+.certif-body h3 {
+  color: #1e40af;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.certif-issuer {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.certif-desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.certif-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.certif-badge.obtained {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.certif-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+@media (max-width: 1024px) {
+  .certifications {
+    margin: 20px auto;
+    padding: 0 15px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .certif-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .certif-issuer {
+    justify-content: center;
+  }
+}
+
+/* Footer */
 .footer {
   background-color: #000;
   color: #fff;
