@@ -117,13 +117,35 @@ header {
   padding-bottom: 30px;
 }
 
-.btn-home1 {
+
+/* ancien bouton home-1 pour telchargementcv */
+/* .btn-home1 {
   background-color: #000000;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;
   padding: 10px 10px;
   cursor: pointer;
+} */
+
+.btn-home1 {
+  font-style: normal;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-home1:hover {
+  background-color: #e87e7a;
+  color: #fff;
 }
 
 .btn-home2 {
@@ -314,7 +336,7 @@ hr {
 }
 
 .project-card h3 {
-  color: #1e40af;
+  color: black;
   margin-bottom: 8px;
 }
 
@@ -351,7 +373,7 @@ hr {
 }
 
 .btn {
-  background: #1e40af;
+  background: #e87e7a;
   color: white;
   text-decoration: none;
   padding: 8px 14px;
@@ -364,7 +386,7 @@ hr {
 }
 
 .btn:hover {
-  background: #2563eb;
+  background: #e87e7a;
   border-radius: 25px;
 
 }
@@ -420,7 +442,7 @@ hr {
 }
 
 .service-card h3 {
-  color: #1e40af;
+  color: black;
   margin-bottom: 10px;
   transition: color 0.5s;
   position: relative;
@@ -442,7 +464,7 @@ hr {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: #474af0;
+  background: #e87e7a;
   z-index: 0;
   transition: 0.5s;
 }
@@ -527,7 +549,7 @@ hr {
 
 .contact-card-left .contact-item i {
   font-size: 18px;
-  color: #ad7ae8;
+  color: #e87e7a;
   width: 20px;
   text-align: center;
 }
@@ -539,12 +561,12 @@ hr {
 }
 
 .contact-card-left .contact-item a:hover {
-  color: #ad7ae8;
+  color: #e87e7a;
 }
 
 .contact-card-right {
   flex: 1;
-  background: #ad7ae8;
+  background: #e87e7a;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -581,7 +603,7 @@ hr {
 
 .contact-card-right .social-link:hover {
   background: #fff;
-  color: #ad7ae8;
+  color: #e87e7a;
   transform: translateY(-4px);
 }
 
@@ -643,13 +665,13 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6366f1;
+  color: rgb(77, 64, 64);
 }
 
 .skill-tag {
   display: inline-block;
   background: #e0e7ff;
-  color: #1e3a8a;
+  color: red;
   font-size: 0.8rem;
   padding: 5px 10px;
   border-radius: 6px;
@@ -742,7 +764,7 @@ hr {
 }
 
 .certif-body h3 {
-  color: #1e40af;
+  color: black;
   margin-bottom: 5px;
   font-size: 1rem;
 }
