@@ -971,6 +971,16 @@ hr {
   color: #e87e7a;
 }
 
+.footer-copy a {
+  color: #e87e7a;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.footer-copy a:hover {
+  text-decoration: underline;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
