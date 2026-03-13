@@ -65,7 +65,7 @@ backToTop.style.cssText = `
   position: fixed;
   bottom: 40px;
   right: 40px;
-  background: #474af0;
+  background: #e87e7a;
   color: white;
   width: 50px;
   height: 50px;

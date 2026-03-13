@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon portfolio - Lorène</title>
+    <title>Portfolio - Lorène Goarant</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +17,6 @@
 </head>
 
 <body>
-    <!-- <div id="loading-screen">
-        <div class="loading-content">
-            <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
-
-            <h1 id="loading-text" class="hidden">Mon profil</h1>
-
-            <div class="sub-icons">
-                <i class="fa-brands fa-github fa-2x hidden"></i>
-                <i class="fa-solid fa-code fa-2x hidden"></i>
-                <i class="fa-solid fa-user fa-2x hidden"></i>
-            </div>
-
-            <h2 id="designer-text" class="hidden">Designed by Lorène</h2>
-        </div>
-    </div> -->
     <header class="header-list">
         <div class="div-list ">
             <ul class="ul-list">
@@ -42,6 +27,10 @@
                 <li>
                     <i class="fa-regular fa-address-card"></i>
                     <a href="#about">A propos</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <a href="#competences">Compétences</a>
                 </li>
                 <li>
                     <i class="fa-regular fa-folder-open"></i>
@@ -80,8 +69,8 @@
 
                     </div>
                     <div class="info-p2">
-                        <p><i class="fa-solid fa-location-dot"></i> Basé en France, sur Quimper-Chateaulin</p>
-                        <p><i class="fa-solid fa-briefcase"></i> Prise en stage</p>
+                        <p><i class="fa-solid fa-location-dot"></i> En France, sur Quimper-Chateaulin</p>
+                        <p><i class="fa-solid fa-briefcase"></i> Prise en stage !</p>
                     </div>
                     <div class="btnn">
                         <a href="PDF_CV.pdf" target="_blank" class="btn-cv">
@@ -108,6 +97,8 @@
         </div>
     </section>
     <!-- fine home  -->
+    <!-- A propos -->
+
     <section class="about" id="about">
         <p id="about">A PROPOS</p>
         <div class="title">
@@ -121,8 +112,6 @@
             <div class="info-about">
                 <div class="about-info">
                     <p>
-                        Je suis étudiante en BTS SIO (Services Informatiques aux Organisations), option SLAM
-                        (Solutions Logicielles et Applications Métier) au lycée Saint-Louis à Châteaulin.
                         Cette formation m'apporte des compétences solides en développement d'applications,
                         gestion de bases de données et conception de solutions logicielles adaptées aux besoins des
                         entreprises.
@@ -152,10 +141,86 @@
             <img src="dev_img2.jpg" alt="">
         </div>
     </section>
+
+    <section class="competences" id="competences">
+        <h1>Mes compétences</h1>
+        <hr>
+        <div class="competences-container">
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-code"></i> Langages</h3>
+                <ul class="competence-list">
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C#</li>
+                    <li>Shell</li>
+                    <li>PowerShell</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-globe"></i> Développement Web</h3>
+                <ul class="competence-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>XML</li>
+                    <li>JSON</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-database"></i> Bases de données</h3>
+                <ul class="competence-list">
+                    <li>SQL</li>
+                    <li>MySQL</li>
+                    <li>phpMyAdmin</li>
+                    <li>MCD / MPD</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-toolbox"></i> Logiciels</h3>
+                <ul class="competence-list">
+                    <li>Visual Studio Code</li>
+                    <li>VirtualBox</li>
+                    <li>Proxmox</li>
+                    <li>GLPI</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-server"></i> Systèmes d'exploitation</h3>
+                <ul class="competence-list">
+                    <li>Windows</li>
+                    <li>Linux</li>
+                    <li>Kali Linux</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-shield-halved"></i> Cybersécurité</h3>
+                <ul class="competence-list">
+                    <li>RGPD</li>
+                    <li>PIA</li>
+                </ul>
+            </div>
+
+            <div class="competence-group">
+                <h3><i class="fa-solid fa-network-wired"></i> Réseau</h3>
+                <ul class="competence-list">
+                    <li>Packet Tracer</li>
+                    <li>Wireshark</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Projets -->
 
     <section class="project" id="project">
-        <p>PROJETS</p>
         <h1>Mes projets</h1>
         <hr>
         <div class="info-pro">
@@ -163,14 +228,18 @@
             <p>De nouveaux projets seront ajoutés au fil de ma formation.</p>
         </div>
         <div class="projects-container">
-            <div class="project-card placeholder-card">
+            <div class="project-card">
+                <!-- <img src="placeholder-img" alt="test"> -->
                 <div class="placeholder-img"><i class="fa-solid fa-code fa-3x"></i></div>
                 <h3>Projet à venir</h3>
                 <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
                 <div class="skills">
-                    <span class="skill-tag">À définir</span>
+                    <a href="#">HTML</a>
+                    <a href="#">CSS</a>
                 </div>
                 <div class="btns">
+                    <!-- <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
                     <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
                     <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
                 </div>
@@ -202,7 +271,6 @@
                 <div class="skills">
                     <a href="#">HTML</a>
                     <a href="#">CSS</a>
-                    <a href="#">API</a>
                 </div>
                 <div class="btns">
                     <!-- <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
@@ -211,60 +279,52 @@
                     <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="placeholder-img" alt="test">
-                <h3>Projet à venir</h3>
-                <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
-                <div class="skills">
-                    <a href="#">HTML</a>
-                    <a href="#">CSS</a>
-                    <a href="#">API</a>
-                </div>
-                <div class="btns">
-                    <!-- <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                    <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
-                    <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+            <div class="projects-container">
+                <div class="project-card placeholder-card">
+                    <div class="placeholder-img"><i class="fa-solid fa-3x"></i></div>
+                    <h3>Projet à venir</h3>
+                    <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
+                    <div class="skills">
+                        <span class="skill-tag">À définir</span>
+                    </div>
+                    <div class="btns">
+                        <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="placeholder-img" alt="test">
-                <h3>Projet à venir</h3>
-                <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
-                <div class="skills">
-                    <a href="#">HTML</a>
-                    <a href="#">CSS</a>
-                    <a href="#">API</a>
-                </div>
-                <div class="btns">
-                    <!-- <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                    <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
-                    <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+            <div class="projects-container">
+                <div class="project-card placeholder-card">
+                    <div class="placeholder-img"><i class="fa-solid fa-3x"></i></div>
+                    <h3>Projet à venir</h3>
+                    <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
+                    <div class="skills">
+                        <span class="skill-tag">À définir</span>
+                    </div>
+                    <div class="btns">
+                        <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="placeholder-img" alt="test">
-                <h3>Projet à venir</h3>
-                <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
-                <div class="skills">
-                    <a href="#">HTML</a>
-                    <a href="#">CSS</a>
-                    <a href="#">API</a>
-                </div>
-                <div class="btns">
-                    <!-- <a href="#" class="btn"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                    <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
-                    <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+            <div class="projects-container">
+                <div class="project-card placeholder-card">
+                    <div class="placeholder-img"><i class="fa-solid fa-3x"></i></div>
+                    <h3>Projet à venir</h3>
+                    <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
+                    <div class="skills">
+                        <span class="skill-tag">À définir</span>
+                    </div>
+                    <div class="btns">
+                        <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     <!-- Veille technologique -->
 
     <section class="services" id="services">
-        <p>VEILLE</p>
         <h1>Ma veille technologique</h1>
         <hr>
         <div class="info-pro">
@@ -297,7 +357,6 @@
     </section>
     <!-- Certifications -->
     <section class="certifications" id="certifications">
-        <p>CERTIFICATIONS</p>
         <h1>Mes certifications</h1>
         <hr>
         <div class="info-pro">
@@ -309,7 +368,8 @@
                 <div class="certif-body">
                     <h3>SecNumacadémie</h3>
                     <p class="certif-issuer"><i class="fa-solid fa-building"></i> MOOC ANSSI</p>
-                    <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité numérique
+                    <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité
+                        numérique
                         : menaces, protection des données, bonnes pratiques.</p>
                     <span class="certif-badge obtained">Obtenue</span>
                 </div>
@@ -319,7 +379,8 @@
                 <div class="certif-body">
                     <h3>Linux Unhatched</h3>
                     <p class="certif-issuer"><i class="fa-solid fa-building"></i> Cisco NetworkAcademy</p>
-                    <p class="certif-desc">Introduction aux systèmes Linux : navigation en ligne de commande, gestion
+                    <p class="certif-desc">Introduction aux systèmes Linux : navigation en ligne de commande,
+                        gestion
                         des fichiers et des permissions, scripting de base.</p>
                     <span class="certif-badge obtained">Obtenue</span>
                 </div>
@@ -346,7 +407,6 @@
     </section>
     <!-- Contact -->
     <section class="contact" id="contact">
-        <p>CONTACT</p>
         <h1>Me contacter</h1>
         <hr>
         <div class="contact-card">
@@ -404,6 +464,7 @@
             <ul class="footer-links">
                 <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">A propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
                 <li><a href="#project">Projets</a></li>
                 <li><a href="#services">Veille</a></li>
                 <li><a href="#certifications">Certifications</a></li>
