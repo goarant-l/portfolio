@@ -119,6 +119,9 @@ function type() {
     }
 }
 
+
+
+
 document.addEventListener('DOMContentLoaded', type);
 
 // document.addEventListener("DOMContentLoaded", () => {
