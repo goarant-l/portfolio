@@ -915,21 +915,51 @@ hr {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 7px;
 }
 
 .competence-list li {
   font-size: 0.875rem;
   color: #444;
-  padding-left: 14px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.competence-list li::before {
-  content: "–";
-  position: absolute;
-  left: 0;
-  color: black;
+/* étoile — Langages & Systèmes */
+.competence-list.puce-etoile li::before {
+  content: "★";
+  color: #e87e7a;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* trait à gauche — Développement Web */
+.competence-list.puce-trait li {
+  border-left: 3px solid #e87e7a;
+  padding-left: 10px;
+}
+
+/* losange — Bases de données & Cybersécurité */
+.competence-list.puce-losange li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: #e87e7a;
+  display: inline-block;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+}
+
+/* cercle contour — Logiciels & Réseau */
+.competence-list.puce-cercle li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #e87e7a;
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {

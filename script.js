@@ -91,6 +91,8 @@ cards.forEach(card => {
   card.addEventListener('mouseleave', () => card.style.transform = 'translateY(0) scale(1)');
 });
 
+
+// ce qui permet d'avoir la phrase qui défile sous le Lorene Goarant
 const typingElement = document.querySelector('.info-home h3'); 
 const words = ["Je suis étudiante", "en BTS SIO", "option SLAM", "en 1ere année"];
 let wordIndex = 0;
@@ -119,6 +121,11 @@ function type() {
     }
 }
 
+// ce qui permet d'afficher le h3 avec les info qui défile sous Lorene Goarant
+document.addEventListener('DOMContentLoaded', type);
+
+
+// le modale pour la petite page des pdf des certifications obtenu
 function openCertif(pdfPath) {
   document.getElementById('certif-iframe').src = pdfPath;
   document.getElementById('certif-modal').classList.add('active');
@@ -137,35 +144,3 @@ function closeCertif(event) {
     closeCertifBtn();
   }
 }
-
-
-// document.addEventListener('DOMContentLoaded', type);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const loadingText = document.getElementById("loading-text");
-//   const mainIcon = document.querySelector(".main-icon");
-//   const subIcons = document.querySelectorAll(".sub-icons i");
-//   const designerText = document.getElementById("designer-text");
-//   const mainPage = document.getElementById("main-page");
-//   const loadingScreen = document.getElementById("loading-screen");
-
-//   function showElement(element, delay=0){
-//     setTimeout(() => {
-//       element.classList.remove("hidden");
-//       element.classList.add("fall");
-//     }, delay);
-//   }
-
-//   showElement(loadingText, 0);          
-//   showElement(mainIcon, 800);         
-//   subIcons.forEach((icon, idx) => {
-//     showElement(icon, 1600 + idx*400);  
-//   });
-//   showElement(designerText, 2800);    
-
-//   setTimeout(() => {
-//     loadingScreen.style.opacity = '0';
-//     setTimeout(() => loadingScreen.style.display='none', 500);
-//     mainPage.classList.add("visible");
-//   }, 4000);
-// });
