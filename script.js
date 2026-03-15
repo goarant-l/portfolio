@@ -126,11 +126,21 @@ document.addEventListener('DOMContentLoaded', type);
 
 
 // le modale pour la petite page des pdf des certifications obtenu
+
+// 1er format d'ouverture de pdf certif
 function openCertif(pdfPath) {
   document.getElementById('certif-iframe').src = pdfPath;
   document.getElementById('certif-modal').classList.add('active');
   document.body.style.overflow = 'hidden'; // bloque le scroll derrière
 }
+// OU ALORS 2eme format d'ouverture de pdf certif
+// function openCertif(pdfPath) {
+//   const fullUrl = 'https://goarant-l.github.io/portfolio/' + pdfPath;
+//   document.getElementById('certif-iframe').src = 
+//     'https://mozilla.github.io/pdf.js/web/viewer.html?file=' + encodeURIComponent(fullUrl);
+//   document.getElementById('certif-modal').classList.add('active');
+//   document.body.style.overflow = 'hidden';
+// }
 
 function closeCertifBtn() {
   document.getElementById('certif-modal').classList.remove('active');
