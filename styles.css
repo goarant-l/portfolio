@@ -463,9 +463,10 @@ hr {
 .services-container {
   padding-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   max-width: 1100px;
+  width: 100%;
   margin: auto;
 }
 
@@ -485,6 +486,9 @@ hr {
   margin-bottom: 15px;
   z-index: 1;
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card h3 {
@@ -633,6 +637,13 @@ hr {
   justify-content: center;
   color: #fff;
   margin-bottom: 5px;
+   overflow: hidden;
+}
+
+.contact-avatar-photo {
+    background-image: url('images/img_persopdp.jpg');
+    background-size: 110%;
+    background-position: 50% 15%;
 }
 
 .contact-card-right p {
@@ -804,6 +815,32 @@ hr {
 .certif-badge.pending {
   background: #fef3c7;
   color: #92400e;
+}
+
+@media (max-width: 1280px) {
+  .home,
+  .about,
+  .project,
+  .services,
+  .contact,
+  .certifications,
+  .competences {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .home,
+  .about,
+  .project,
+  .services,
+  .contact,
+  .certifications,
+  .competences {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1027,7 +1064,12 @@ body {
   .home img,
   .about img {
     width: 100%;
-    height: auto;
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
   }
 
   .ul-list {
