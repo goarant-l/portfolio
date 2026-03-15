@@ -119,10 +119,27 @@ function type() {
     }
 }
 
+function openCertif(pdfPath) {
+  document.getElementById('certif-iframe').src = pdfPath;
+  document.getElementById('certif-modal').classList.add('active');
+  document.body.style.overflow = 'hidden'; // bloque le scroll derrière
+}
+
+function closeCertifBtn() {
+  document.getElementById('certif-modal').classList.remove('active');
+  document.getElementById('certif-iframe').src = '';
+  document.body.style.overflow = '';
+}
+
+function closeCertif(event) {
+  // ferme seulement si on clique sur le fond sombre (pas sur la boîte)
+  if (event.target === document.getElementById('certif-modal')) {
+    closeCertifBtn();
+  }
+}
 
 
-
-document.addEventListener('DOMContentLoaded', type);
+// document.addEventListener('DOMContentLoaded', type);
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const loadingText = document.getElementById("loading-text");

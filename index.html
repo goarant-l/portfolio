@@ -375,6 +375,9 @@
                         numérique
                         : menaces, protection des données, bonnes pratiques.</p>
                     <span class="certif-badge obtained">Obtenue</span>
+                    <button class="btn-certif" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
+                        <i class="fa-solid fa-eye"></i> Voir
+                    </button>
                 </div>
             </div>
             <div class="certif-card">
@@ -386,7 +389,9 @@
                         gestion
                         des fichiers et des permissions, scripting de base.</p>
                     <span class="certif-badge obtained">Obtenue</span>
-
+                    <button class="btn-certif" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
+                        <i class="fa-solid fa-eye"></i> Voir
+                    </button>
                 </div>
             </div>
             <div class="certif-card placeholder-certif">
@@ -444,7 +449,7 @@
             <div class="contact-card-right">
                 <div class="contact-avatar">
                     <!-- <img src="images/img_persopdp.jpg" alt="photo de profil" class="conatct-avatar_img"> -->
-                     <div class="contact-avatar contact-avatar-photo"></div>
+                    <div class="contact-avatar contact-avatar-photo"></div>
                 </div>
                 <p>N'hésitez pas à me contacter par email ou via mes réseaux sociaux !</p>
                 <div class="social-links" style="justify-content: center; margin-top: 20px;">
@@ -487,6 +492,15 @@
             </p>
         </div>
     </footer>
+
+    <div id="certif-modal" class="certif-modal-overlay" onclick="closeCertif(event)">
+        <div class="certif-modal-box">
+            <button class="certif-close" onclick="closeCertifBtn()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <iframe id="certif-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
