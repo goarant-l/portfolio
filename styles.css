@@ -244,7 +244,7 @@ hr {
 }
 
 .about h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 .title {
@@ -266,17 +266,96 @@ hr {
   gap: 2rem;
 }
 
-.about img {
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   position: relative;
   bottom: 85px;
+}
+
+.about-img-main {
   width: 400px;
-  height: 400px;
+  height: 350px;
+  object-fit: cover;
   border-radius: 15px;
   border: 1px solid black;
 }
 
+.about-img-row {
+  display: flex;
+  gap: 12px;
+}
+
+.about-img-small {
+  width: 194px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: none;
+}
+
+.about-images:hover .about-img-main,
+.about-images:hover .about-img-small {
+  filter: brightness(0.5);
+  transform: scale(0.98);
+}
+
+.about-img-main,
+.about-img-small {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-img-main:hover,
+.about-img-small:hover {
+  filter: brightness(1) !important;
+  transform: scale(1.05) !important;
+  z-index: 10;
+  position: relative;
+}
+
 .about h2 {
   padding-bottom: 30px;
+
+}
+
+.about-extra {
+  margin-top: 40px;
+}
+
+.about-extra h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  padding-bottom: 15px;
+  color: #222;
+}
+
+.about-extra-dark {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+}
+
+.about-extra-quote {
+  font-size: 60px;
+  color: #e87e7a;
+  font-family: Georgia, serif;
+  line-height: 0;
+  position: relative;
+  top: 20px;
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.about-extra-dark p {
+  font-size: 0.95rem;
+  color: black;
+  line-height: 1.9;
+  padding-bottom: 0 !important;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -325,7 +404,7 @@ hr {
 }
 
 .competences h1 {
- font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   padding-bottom: 10px;
 }
@@ -423,7 +502,8 @@ hr {
 }
 
 .project h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 
@@ -578,7 +658,8 @@ hr {
 }
 
 .services h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 
@@ -670,7 +751,8 @@ hr {
 }
 
 .certifications h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 
@@ -820,7 +902,8 @@ hr {
 }
 
 .contact h1 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   padding-bottom: 10px;
 }
 
@@ -1118,6 +1201,7 @@ body {
 /* ===================== */
 
 @media (max-width: 1280px) {
+
   .home,
   .about,
   .project,
@@ -1131,6 +1215,7 @@ body {
 }
 
 @media (max-width: 1100px) {
+
   .home,
   .about,
   .project,
@@ -1174,17 +1259,29 @@ body {
     gap: 1.5rem;
   }
 
-  .about img {
+  .about-images {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .about-img-main {
     width: 100%;
     max-width: 280px;
     height: auto;
-    margin-bottom: 20px;
-    position: relative;
-    bottom: 0;
-    z-index: 1;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 12px auto;
+  }
+
+  .about-img-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .about-img-small {
+    width: 48%;
+    height: auto;
   }
 
   .home img,
@@ -1275,6 +1372,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .home,
   .about,
   .project,
@@ -1317,5 +1415,15 @@ body {
 
   .competences-container {
     grid-template-columns: 1fr;
+  }
+
+  .about-img-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-img-small {
+    width: 100%;
+    max-width: 280px;
   }
 }
