@@ -12,7 +12,7 @@ navLinks.forEach(link => {
     const targetSection = document.getElementById(targetId);
 
     window.scrollTo({
-      top: targetSection.offsetTop - 80, 
+      top: targetSection.offsetTop - 80,
       behavior: 'smooth'
     });
 
@@ -24,15 +24,22 @@ navLinks.forEach(link => {
 window.addEventListener('scroll', () => {
   let scrollPos = window.scrollY + 100;
 
-  sections.forEach(section => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-      removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add('active');
-    }
-  });
+  const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+  if (nearBottom) {
+    removeActive();
+    const contactLink = document.querySelector('.ul-list li a[href="#contact"]');
+    if (contactLink) contactLink.parentElement.classList.add('active');
+  } else {
+    sections.forEach(section => {
+      if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+        removeActive();
+        const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
+        if (activeLink) activeLink.parentElement.classList.add('active');
+      }
+    });
+  }
 
-  if(window.scrollY > 500){
+  if (window.scrollY > 500) {
     backToTop.style.display = "flex";
   } else {
     backToTop.style.display = "none";
@@ -43,7 +50,7 @@ window.addEventListener('scroll', () => {
     const elementTop = el.getBoundingClientRect().top;
     const revealPoint = 150;
 
-    if(elementTop < windowHeight - revealPoint){
+    if (elementTop < windowHeight - revealPoint) {
       el.classList.add('active-reveal');
     }
   });
@@ -54,7 +61,7 @@ revealElements.forEach(el => {
   el.classList.add('reveal');
   el.classList.add('active-reveal');
 });
-  
+
 
 const backToTop = document.createElement('div');
 backToTop.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
@@ -93,7 +100,7 @@ cards.forEach(card => {
 
 
 // ce qui permet d'avoir la phrase qui défile sous le Lorene Goarant
-const typingElement = document.querySelector('.info-home h3'); 
+const typingElement = document.querySelector('.info-home h3');
 const words = ["Je suis étudiante", "en BTS SIO", "option SLAM", "en 1ere année"];
 let wordIndex = 0;
 let charIndex = 0;
@@ -101,24 +108,24 @@ let isDeleting = false;
 let typingSpeed = 100;
 
 function type() {
-    const currentWord = words[wordIndex];
-    let displayedText = currentWord.substring(0, charIndex);
-    
-    typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+  const currentWord = words[wordIndex];
+  let displayedText = currentWord.substring(0, charIndex);
 
-    if (!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(type, typingSpeed);
-    } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(type, typingSpeed / 2);
-    } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) {
-            wordIndex = (wordIndex + 1) % words.length;
-        }
-        setTimeout(type, 1000);
+  typingElement.innerHTML = displayedText + '<span class="cursor">|</span>';
+
+  if (!isDeleting && charIndex < currentWord.length) {
+    charIndex++;
+    setTimeout(type, typingSpeed);
+  } else if (isDeleting && charIndex > 0) {
+    charIndex--;
+    setTimeout(type, typingSpeed / 2);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) {
+      wordIndex = (wordIndex + 1) % words.length;
     }
+    setTimeout(type, 1000);
+  }
 }
 
 // ce qui permet d'afficher le h3 avec les info qui défile sous Lorene Goarant
