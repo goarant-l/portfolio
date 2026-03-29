@@ -288,9 +288,16 @@
             </div>
 
             <div class="project-card">
-                <!-- Quand j'aurais une image mettre la ligne du dessous que j'ai mis en commentaire -->
-                <div class="placeholder-img"><i class="fa-solid fa-cloud-sun fa-3x"></i></div>
-                <h3>API météo - Châteaulin</h3>
+                <!-- OPTION 1 DE L'AFFICHAGE DU GIF DANS LA CARD -->
+                <!-- <div class="placeholder-img"><i class="fa-solid fa-cloud-sun fa-3x"></i></div>
+                <h3>API météo - Châteaulin <i class="fa-solid fa-cloud-sun fa-1x"></i></h3> -->
+
+                <!-- OPTION 2 DE L'AFFICHAGE DU GIF DANS LA CARD AVEC LE CSS dans le fichier css  -->
+                <div class="placeholder-img">
+                    <i class="fa-solid fa-cloud-sun fa-2x placeholder-icon"></i>
+                    <img src="images/API_meteo_LG.gif" alt="Aperçu API météo">
+                </div>
+
                 <p>Application météo affichant les conditions actuelles de Châteaulin et d'autres ville en France en
                     temps réel,
                     avec une image dynamique qui s'adapte selon la météo du moment.
@@ -301,7 +308,7 @@
                     <a href="#">HTML</a>
                     <a href="#">CSS</a>
                     <a href="#">JavaScript</a>
-                    <a href="#">API REST</a>
+                    <a href="#">API</a>
                 </div>
                 <div class="btns">
                     <!-- <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
@@ -312,7 +319,6 @@
                     </button>
                 </div>
             </div>
-
             <div class="project-card">
                 <!-- Quand j'aurais une image mettre la ligne du dessous que j'ai mis en commentaire -->
                 <!-- <img src="exemple_image.jpg" alt="test exemple image"> -->
@@ -591,7 +597,8 @@
             <button class="certif-close" onclick="closeDemoBtn()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <img src="images/API_meteo_LG.gif" alt="Démo API Météo" style="width:100%; height:100%; object-fit:contain;">
+            <img src="images/API_meteo_LG.gif" alt="Démo API Météo"
+                style="width:100%; height:100%; object-fit:contain;">
         </div>
     </div>
 
