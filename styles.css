@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -597,6 +595,9 @@ hr {
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .btn:hover {
@@ -1167,10 +1168,12 @@ hr {
   background: #fff;
   border-radius: 16px;
   width: 90%;
-  max-width: 800px;
-  height: 80vh;
+  max-width: 900px;
+  height: 85vh;
+  max-height: 600px;
   position: relative;
   overflow: hidden;
+  /* resize: both; */
 }
 
 .certif-modal-box iframe {
@@ -1442,5 +1445,5 @@ body {
     width: 100%;
     max-width: 280px;
   }
-  
+
 }

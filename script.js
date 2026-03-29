@@ -131,6 +131,23 @@ function type() {
 // ce qui permet d'afficher le h3 avec les info qui défile sous Lorene Goarant
 document.addEventListener('DOMContentLoaded', type);
 
+// le modale pour la petite page des démo des projets qui s'affiche
+
+function openDemo() {
+    document.getElementById('demo-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDemoBtn() {
+    document.getElementById('demo-modal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function closeDemo(event) {
+    if (event.target === document.getElementById('demo-modal')) {
+        closeDemoBtn();
+    }
+}
 
 // le modale pour la petite page des pdf des certifications obtenu
 

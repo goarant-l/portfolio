@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Lorène Goarant</title>
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -289,10 +289,10 @@
 
             <div class="project-card">
                 <!-- Quand j'aurais une image mettre la ligne du dessous que j'ai mis en commentaire -->
-                <!-- <img src="exemple_image.jpg" alt="test exemple image"> -->
                 <div class="placeholder-img"><i class="fa-solid fa-cloud-sun fa-3x"></i></div>
                 <h3>API météo - Châteaulin</h3>
-                <p>Application météo affichant les conditions actuelles de Châteaulin en temps réel,
+                <p>Application météo affichant les conditions actuelles de Châteaulin et d'autres ville en France en
+                    temps réel,
                     avec une image dynamique qui s'adapte selon la météo du moment.
                     Les données sont récupérées depuis une API météo officielle et se mettent
                     à jour automatiquement.
@@ -307,7 +307,9 @@
                     <!-- <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
                     <a href="https://github.com/goarant-l/API_meteo" class="btn" target="_blank"><i
                             class="fab fa-github"></i> GitHub</a>
-                    <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
+                    <button class="btn" onclick="openDemo()">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </button>
                 </div>
             </div>
 
@@ -583,6 +585,15 @@
             </p>
         </div>
     </footer>
+
+    <div id="demo-modal" class="certif-modal-overlay" onclick="closeDemo(event)">
+        <div class="certif-modal-box">
+            <button class="certif-close" onclick="closeDemoBtn()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img src="images/API_meteo_LG.gif" alt="Démo API Météo" style="width:100%; height:100%; object-fit:contain;">
+        </div>
+    </div>
 
     <div id="certif-modal" class="certif-modal-overlay" onclick="closeCertif(event)">
         <div class="certif-modal-box">
