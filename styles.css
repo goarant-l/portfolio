@@ -97,10 +97,32 @@ header {
 
 /* fine header */
 
-/* Home */
-.home {
-  margin: 160px 200px;
+.hero-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  /* Prend toute la hauteur de l'écran */
+  align-items: stretch;
+  /* Les deux colonnes auront la même hauteur */
 }
+
+/* On ajuste les sections pour qu'elles prennent chacune 50% de largeur */
+.home,
+.about {
+  flex: 1;
+  /* Partage l'espace équitablement (50/50) */
+  margin: 0 !important;
+  padding: 120px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about {
+  background-color: transparent;
+}
+
+/* Home */
 
 .home-container {
   display: flex;
@@ -233,9 +255,6 @@ hr {
 /* fine home */
 
 /* A propos */
-.about {
-  margin: 160px 200px;
-}
 
 .about p {
   padding-bottom: 30px;
@@ -263,43 +282,40 @@ hr {
 
 .about-container {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
 .about-images {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  position: relative;
-  bottom: 85px;
-}
-
-.about-img-main {
-  width: 400px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 1px solid black;
+  justify-content: center;
 }
 
 .about-img-row {
   display: flex;
-  gap: 12px;
+  gap: 20px;
+  /* Espace entre les deux images */
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .about-img-small {
-  width: 194px;
-  height: 200px;
+  width: 45%;
+  /* Permet d'avoir les deux images sur la même ligne */
+  max-width: 400px;
+  /* Évite qu'elles ne deviennent trop géantes */
+  height: 300px;
+  /* Garde une hauteur fixe pour l'harmonie */
   object-fit: cover;
+  /* Coupe l'image proprement pour remplir le cadre */
   border-radius: 12px;
+  transition: transform 0.3s ease;
   border: none;
 }
 
 .about-images:hover .about-img-main,
-.about-images:hover .about-img-small {
-  filter: brightness(0.5);
-  transform: scale(0.98);
-}
 
 .about-img-main,
 .about-img-small {
@@ -309,10 +325,12 @@ hr {
 
 .about-img-main:hover,
 .about-img-small:hover {
-  filter: brightness(1) !important;
+  transform: scale(1.05);
+  /* Petit effet de zoom au survol */
+  /* filter: brightness(1) !important;
   transform: scale(1.05) !important;
   z-index: 10;
-  position: relative;
+  position: relative; */
 }
 
 .about h2 {
@@ -390,7 +408,9 @@ hr {
 
 /* Compétences */
 .competences {
-  margin: 160px 200px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -488,7 +508,9 @@ hr {
 
 /* Projets */
 .project {
-  margin: 160px 200px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -683,7 +705,9 @@ hr {
 
 /* Veille / Services */
 .services {
-  margin: 160px 200px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -776,7 +800,9 @@ hr {
 
 /* Certifications */
 .certifications {
-  margin: 160px 200px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -927,7 +953,9 @@ hr {
 
 /* Contact */
 .contact {
-  margin: 160px 200px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1468,4 +1496,17 @@ body {
     max-width: 280px;
   }
 
+}
+
+/* --- IMPORTANT : Responsive (Mobile) --- */
+/* Sur téléphone, on les remet l'un en dessous de l'autre */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .home,
+  .about {
+    width: 100%;
+  }
 }
