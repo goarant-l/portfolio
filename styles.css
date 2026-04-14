@@ -100,8 +100,9 @@ header {
 .hero-container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   /* Prend toute la hauteur de l'écran */
+  padding-bottom: 50px;
   align-items: stretch;
   /* Les deux colonnes auront la même hauteur */
 }
@@ -112,10 +113,10 @@ header {
   flex: 1;
   /* Partage l'espace équitablement (50/50) */
   margin: 0 !important;
-  padding: 120px 60px;
+  padding: 120px 60px 0px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .about {
@@ -147,6 +148,8 @@ header {
   font-size: 70px;
   font-family: "Raleway", sans-serif;
   margin-bottom: 20px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .info-home h3 {
@@ -156,9 +159,10 @@ header {
 }
 
 .info-p {
+  font-size: 18px;
   color: #222;
   font-family: "Roboto", sans-serif;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .info-p p {
@@ -257,13 +261,16 @@ hr {
 /* A propos */
 
 .about p {
+  font-size: 18px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
   padding-bottom: 30px;
-  font-size: 13px;
-  color: rgb(50, 50, 50);
 }
 
 .about h1 {
   font-family: "Playfair Display", serif;
+  margin-top: 16px;
+  padding-top: 0;
 }
 
 .title {
@@ -420,7 +427,7 @@ hr {
 .competences p {
   padding-bottom: 20px;
   font-size: 13px;
-  color: rgb(50, 50, 50);
+  color: #222;
 }
 
 .competences h1 {
@@ -454,7 +461,7 @@ hr {
 }
 
 .competence-group h3 i {
-  color: #444;
+  color: #222;
 }
 
 .competence-list {
@@ -467,8 +474,8 @@ hr {
 }
 
 .competence-list li {
-  font-size: 0.875rem;
-  color: #444;
+  font-size: 18px;
+  color: #222;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -518,9 +525,10 @@ hr {
 }
 
 .project p {
+  font-size: 18px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
   padding-bottom: 20px;
-  font-size: 13px;
-  color: rgb(50, 50, 50);
 }
 
 .project h1 {
@@ -539,6 +547,7 @@ hr {
 
 .info-pro p {
   padding-bottom: 10px;
+
 }
 
 .projects-container {
@@ -575,7 +584,7 @@ hr {
 }
 
 .project-card p {
-  color: #555;
+  color: #222;
   font-size: 0.9rem;
   margin-bottom: 15px;
 }
@@ -604,6 +613,7 @@ hr {
   display: flex;
   justify-content: center;
   gap: 10px;
+  text-decoration: none;
 }
 
 .btn {
@@ -625,6 +635,16 @@ hr {
 .btn:hover {
   background: #e87e7a;
   border-radius: 25px;
+}
+
+.btn-doc {
+  text-decoration: none; /* Enlève le trait sous le bouton */
+  display: inline-block; /* Pour que le lien englobe bien le bouton */
+}
+
+/* Optionnel : si tu veux un effet au survol spécifique */
+.btn-doc:hover {
+  text-decoration: none;
 }
 
 .placeholder-card {
@@ -715,9 +735,10 @@ hr {
 }
 
 .services p {
+  font-size: 18px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
   padding-bottom: 20px;
-  font-size: 13px;
-  color: rgb(50, 50, 50);
 }
 
 .services h1 {
@@ -770,7 +791,7 @@ hr {
 }
 
 .service-card p {
-  color: #555;
+  color: #222;
   font-size: 0.9rem;
   transition: color 0.5s;
   position: relative;
@@ -809,10 +830,11 @@ hr {
   flex-direction: column;
 }
 
-.certifications p {
+.certifications>p {
+  font-size: 18px;
+  color: #222;
+  font-family: "Roboto", sans-serif;
   padding-bottom: 20px;
-  font-size: 13px;
-  color: rgb(50, 50, 50);
 }
 
 .certifications h1 {
@@ -835,11 +857,31 @@ hr {
   margin: auto;
 }
 
+.certif-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  /* On empile la date et le bouton */
+  gap: 12px;
+  /* Espace entre la ligne date et le bouton */
+  padding-top: 15px;
+}
+
+.certif-status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.separator {
+  color: #d1d5db;
+}
+
 .certif-date {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 14px;
   color: black;
   margin-top: 6px;
   display: flex;
@@ -907,8 +949,8 @@ hr {
 }
 
 .certif-desc {
-  font-size: 0.85rem;
-  color: #555;
+  font-size: 14px !important;
+  color: #222;
   margin-bottom: 12px;
   line-height: 1.5;
 }
@@ -924,6 +966,8 @@ hr {
 .certif-badge.obtained {
   background: #d1fae5;
   color: #065f46;
+  font-size: 14px;
+
 }
 
 .certif-badge.pending {
@@ -932,13 +976,14 @@ hr {
 }
 
 .btn-certif {
+  align-self: flex-start;
   margin-top: 10px;
   background: transparent;
   border: 2px solid #e87e7a;
   color: #e87e7a;
   border-radius: 20px;
   padding: 5px 14px;
-  font-size: 0.8rem;
+  font-size: 14px;
   cursor: pointer;
   transition: 0.3s;
   display: flex;
@@ -1173,7 +1218,7 @@ hr {
 }
 
 .footer-copy {
-  font-size: 12px;
+  font-size: 15px;
   color: #e87e7a;
 }
 
@@ -1186,6 +1231,58 @@ hr {
 .footer-copy a:hover {
   text-decoration: underline;
 }
+
+
+/* Mention légales */
+.mentions-page .back-nav {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.mentions-page .back-nav a {
+    text-decoration: none;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.mentions-page .back-nav a:hover {
+    color: #e87e7a;
+}
+
+.mentions-page .subtitle {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    color: #e87e7a;
+    font-weight: bold;
+}
+
+.mentions-block {
+    margin-bottom: 30px; /* Remplace les <br> pour l'espacement entre blocs */
+}
+
+.mentions-block a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.mentions-block a:hover {
+    text-decoration: underline;
+    color: #e87e7a;
+}
+
+/* On réutilise tes styles existants pour about-info p strong etc. */
+.about-info p strong {
+    display: block;
+    color: #e87e7a;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
 
 /* Animations */
 .reveal {

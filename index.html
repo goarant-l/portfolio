@@ -140,7 +140,7 @@
                                 surveille
                                 les plages l'été, une expérience qui m'a appris la responsabilité et l'esprit d'équipe.
                                 En
-                                dehors de ça, je pratique la course à pied, la natation et la callisthénie, et je joue
+                                dehors de ça, je pratique la course à pied, la natation, la callisthénie, et je joue
                                 aussi
                                 aux
                                 jeux vidéo.</p>
@@ -246,6 +246,76 @@
         </div>
         <div class="projects-container">
             <div class="project-card">
+                <img src="images/image_LAMP.jpg" alt="illustration image LAMP">
+                <h3>Serveur LAMP</h3>
+                <p> Installation et configuration d'un serveur LAMP (Linux, Apache, MySQL, PHP)
+                    dans le cadre du cours de système. Réalisé sur une machine virtuelle VirtualBox
+                    et hébergé via Proxmox.
+                </p>
+                <div class="skills">
+                    <a href="#">Linux</a>
+                    <a href="#">Apache</a>
+                    <a href="#">MySQL</a>
+                    <a href="#">PHP</a>
+                    <a href="#">VirtualBox</a>
+                    <a href="#">Proxmox</a>
+                </div>
+
+                <div class="btns">
+                    <a href="images/DOC_Serveur_LAMP.pdf" target="_blank" class="btn-doc">
+                        <span class="btn"><i class="fas fa-external-link-alt"></i> Documentation</span>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <!-- Quand j'aurais une image mettre la ligne du dessous que j'ai mis en commentaire -->
+                <!-- <img src="exemple_image.jpg" alt="test exemple image"> -->
+                <img src="images/image_parc_linux.jpg" alt="image parc linux">
+                <h3>Parc Linux</h3>
+                <p> Installation et configuration complète d’un poste Linux, de l’assemblage du matériel
+                    à la mise en place du système, du réseau et des outils essentiels.
+                </p>
+                <div class="skills">
+                    <a href="#">Linux</a>
+                    <a href="#">Bash</a>
+                    <a href="#">SSH</a>
+
+                </div>
+
+                <div class="btns">
+                    <a href="images/DOC_parc_linux.pdf" target="_blank" class="btn-doc">
+                        <!--<a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                        <span class="btn"><i class="fas fa-external-link-alt"></i> Documentation</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="images/API_meteo_LG.gif" alt="Aperçu API météo">
+                <h3>API météo - Châteaulin <i class="fa-solid fa-cloud-sun fa-1x"></i></h3>
+                <p>Application météo affichant les conditions actuelles de Châteaulin et d'autres ville en France en
+                    temps réel,
+                    avec une image dynamique qui s'adapte selon la météo du moment.
+                    Les données sont récupérées depuis une API météo officielle et se mettent
+                    à jour automatiquement.
+                </p>
+                <div class="skills">
+                    <a href="#">HTML</a>
+                    <a href="#">CSS</a>
+                    <a href="#">JavaScript</a>
+                    <a href="#">API</a>
+                </div>
+                <div class="btns">
+                    <!-- <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
+                    <a href="https://github.com/goarant-l/API_meteo" class="btn" target="_blank"><i
+                            class="fab fa-github"></i> GitHub</a>
+                    <button class="btn" onclick="openDemo()">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <!-- <img src="placeholder-img" alt="test"> -->
                 <div class="placeholder-img"><i class="fa-solid fa-code fa-3x"></i></div>
                 <h3>Site marchand</h3>
@@ -269,61 +339,6 @@
                     <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
                 </div>
                 <span class="badge-en-cours"><i class="fa-solid fa-circle-notch fa-spin"></i> Projet en cours</span>
-            </div>
-
-            <div class="project-card">
-                <!-- OPTION 1 DE L'AFFICHAGE DU GIF DANS LA CARD -->
-                <!-- <div class="placeholder-img"><i class="fa-solid fa-cloud-sun fa-3x"></i></div>
-                <h3>API météo - Châteaulin <i class="fa-solid fa-cloud-sun fa-1x"></i></h3> -->
-
-                <!-- OPTION 2 DE L'AFFICHAGE DU GIF DANS LA CARD AVEC LE CSS dans le fichier css  -->
-                <div class="placeholder-img">
-                    <!-- <i class="fa-solid fa-cloud-sun fa-2x placeholder-icon"></i> -->
-                    <img src="images/API_meteo_LG.gif" alt="Aperçu API météo">
-                </div>
-                <h3>API météo - Châteaulin <i class="fa-solid fa-cloud-sun fa-1x"></i></h3>
-                <p>Application météo affichant les conditions actuelles de Châteaulin et d'autres ville en France en
-                    temps réel,
-                    avec une image dynamique qui s'adapte selon la météo du moment.
-                    Les données sont récupérées depuis une API météo officielle et se mettent
-                    à jour automatiquement.
-                </p>
-                <div class="skills">
-                    <a href="#">HTML</a>
-                    <a href="#">CSS</a>
-                    <a href="#">JavaScript</a>
-                    <a href="#">API</a>
-                </div>
-                <div class="btns">
-                    <!-- <a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                    <a href="https://github.com/goarant-l/API_meteo" class="btn" target="_blank"><i
-                            class="fab fa-github"></i> GitHub</a>
-                    <button class="btn" onclick="openDemo()">
-                        <i class="fas fa-external-link-alt"></i> Demo
-                    </button>
-                </div>
-            </div>
-            <div class="project-card">
-                <!-- Quand j'aurais une image mettre la ligne du dessous que j'ai mis en commentaire -->
-                <!-- <img src="exemple_image.jpg" alt="test exemple image"> -->
-                <div class="placeholder-img"><i class="fa-solid fa-server fa-3x"></i></div>
-                <h3>Serveur LAMP</h3>
-                <p> Installation et configuration d'un serveur LAMP (Linux, Apache, MySQL, PHP)
-                    dans le cadre du cours de système. Réalisé sur une machine virtuelle VirtualBox
-                    et hébergé via Proxmox.
-                </p>
-                <div class="skills">
-                    <a href="#">Linux</a>
-                    <a href="#">Apache</a>
-                    <a href="#">MySQL</a>
-                    <a href="#">PHP</a>
-                    <a href="#">VirtualBox</a>
-                    <a href="#">Proxmox</a>
-                </div>
-                <div class="btns">
-                    <!--<a href="#" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a> -->
-                    <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
-                </div>
             </div>
 
             <div class="project-card">
@@ -352,22 +367,7 @@
                 <span class="badge-en-cours"><i class="fa-solid fa-circle-notch fa-spin"></i> Projet en cours</span>
             </div>
 
-            <div class="projects-container">
-                <div class="project-card placeholder-card">
-                    <div class="placeholder-img"><i class="fa-solid fa-database fa-3x"></i></div>
-                    <h3>Projet à venir</h3>
-                    <p>Ce projet sera bientôt ajouté. Revenez plus tard !</p>
-                    <div class="skills">
-                        <span class="skill-tag">À définir</span>
-                    </div>
-                    <div class="btns">
-                        <span class="btn btn-disabled"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="projects-container">
+            <!-- <div class="projects-container">
                 <div class="project-card placeholder-card">
                     <div class="placeholder-img"><i class="fa-solid fa-mobile-screen fa-3x"></i></div>
                     <h3>Projet à venir</h3>
@@ -380,7 +380,7 @@
                         <span class="btn btn-disabled"><i class="fas fa-external-link-alt"></i> Demo</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
     </section>
     <!-- Veille technologique -->
 
@@ -429,34 +429,17 @@
                     <h3>SecNumacadémie</h3>
                     <p class="certif-issuer"><i class="fa-solid fa-building"></i> MOOC ANSSI</p>
                     <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité
-                        numérique
-                        : menaces, protection des données, bonnes pratiques.</p>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="certif-badge obtained">Obtenue</span>
-                        <span style="color: #d1d5db;">|</span>
-                        <p class="certif-date"><i class="fa-regular fa-calendar"></i> 27 Février 2026</p>
+                        numérique : menaces, protection des données, bonnes pratiques.</p>
+                    <div class="certif-footer">
+                        <div class="certif-status-row">
+                            <span class="certif-badge obtained">Obtenue</span>
+                            <span class="separator">|</span>
+                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 27 Février 2026</p>
+                        </div>
+                        <button class="btn-certif" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
+                            <i class="fa-solid fa-eye"></i> Voir
+                        </button>
                     </div>
-                    <button class="btn-certif" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
-                        <i class="fa-solid fa-eye"></i> Voir
-                    </button>
-                </div>
-            </div>
-            <div class="certif-card">
-                <div class="certif-icon"><i class="fa-brands fa-linux fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Linux Unhatched</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> Cisco NetworkingkAcademy</p>
-                    <p class="certif-desc">Introduction aux systèmes Linux : navigation en ligne de commande,
-                        gestion
-                        des fichiers et des permissions, scripting de base.</p>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="certif-badge obtained">Obtenue</span>
-                        <span style="color: #d1d5db;">|</span>
-                        <p class="certif-date"><i class="fa-regular fa-calendar"></i> 14 Octobre 2025</p>
-                    </div>
-                    <button class="btn-certif" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
-                        <i class="fa-solid fa-eye"></i> Voir
-                    </button>
                 </div>
             </div>
             <div class="certif-card">
@@ -467,14 +450,45 @@
                     <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité
                         numérique
                         : menaces, protection des données, bonnes pratiques.</p>
-                    <div style="display: flex; align-items: center; gap: 10px;">
-                        <span class="certif-badge obtained">Obtenue</span>
-                        <span style="color: #d1d5db;">|</span>
-                        <p class="certif-date"><i class="fa-regular fa-calendar"></i> 31 Octobre 2025</p>
+                    <div class="certif-footer">
+                        <div class="certif-status-row">
+                            <span class="certif-badge obtained">Obtenue</span>
+                            <span style="color: #d1d5db;">|</span>
+                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 31 Octobre 2025</p>
+                        </div>
+                        <button class="btn-certif" onclick="openCertif('images/certif_cisco_packet_tracer_LG.pdf')">
+                            <i class="fa-solid fa-eye"></i> Voir
+                        </button>
                     </div>
-                    <button class="btn-certif" onclick="openCertif('images/certif_cisco_packet_tracer_LG.pdf')">
-                        <i class="fa-solid fa-eye"></i> Voir
-                    </button>
+                </div>
+            </div>
+            <div class="certif-card">
+                <div class="certif-icon"><i class="fa-brands fa-linux fa-2x"></i></div>
+                <div class="certif-body">
+                    <h3>Linux Unhatched</h3>
+                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> Cisco NetworkingkAcademy</p>
+                    <p class="certif-desc">Introduction aux systèmes Linux : navigation en ligne de commande,
+                        gestion
+                        des fichiers et des permissions, scripting de base.</p>
+                    <div class="certif-footer">
+                        <div class="certif-status-row">
+                            <span class="certif-badge obtained">Obtenue</span>
+                            <span class="separator">|</span>
+                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 14 Octobre 2025</p>
+                        </div>
+                        <button class="btn-certif" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
+                            <i class="fa-solid fa-eye"></i> Voir
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="certif-card placeholder-certif">
+                <div class="certif-icon"><i class="fa-solid fa-certificate fa-2x"></i></div>
+                <div class="certif-body">
+                    <h3>Certification à venir</h3>
+                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> À définir</p>
+                    <p class="certif-desc">Cette certification sera ajoutée prochainement.</p>
+                    <span class="certif-badge pending">En cours</span>
                 </div>
             </div>
             <div class="certif-card placeholder-certif">
