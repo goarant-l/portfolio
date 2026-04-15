@@ -694,8 +694,8 @@ hr {
 }
 
 .project-card p {
-  color: #222;
-  font-size: 0.9rem;
+  color: black;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -848,7 +848,7 @@ hr {
 
 .services p {
   font-size: 18px;
-  color: #222;
+  color: black;
   font-family: "Roboto", sans-serif;
   padding-bottom: 20px;
 }
@@ -904,7 +904,7 @@ hr {
 
 .service-card p {
   color: #222;
-  font-size: 0.9rem;
+  font-size: 16px;
   transition: color 0.5s;
   position: relative;
   z-index: 1;
@@ -942,8 +942,8 @@ hr {
   flex-direction: column;
 }
 
-.certifications>p {
-  font-size: 18px;
+.certifications > p {
+  font-size: 16px;
   color: #222;
   font-family: "Roboto", sans-serif;
   padding-bottom: 20px;
@@ -993,7 +993,7 @@ hr {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   color: black;
   margin-top: 6px;
   display: flex;
@@ -1048,7 +1048,7 @@ hr {
 .certif-body h3 {
   color: black;
   margin-bottom: 5px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
 
 .certif-issuer {
@@ -1061,10 +1061,10 @@ hr {
 }
 
 .certif-desc {
-  font-size: 14px !important;
-  color: #222;
+  font-size: 16px !important;
+  color: black;
   margin-bottom: 12px;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 .certif-badge {
@@ -1122,7 +1122,7 @@ hr {
 .contact p {
   padding-bottom: 20px;
   font-size: 13px;
-  color: rgb(50, 50, 50);
+  color: black;
 }
 
 .contact h1 {
@@ -1163,7 +1163,8 @@ hr {
 
 .contact-card-sub {
   font-size: 0.85rem !important;
-  color: #6b7280 !important;
+  font-style: italic;
+  color: #50555c !important;
   padding-bottom: 0 !important;
 }
 
@@ -1189,7 +1190,8 @@ hr {
 }
 
 .contact-card-left .contact-item a {
-  color: #333;
+  color: black;
+  font-size: 16px;
   text-decoration: none;
   transition: color 0.3s;
 }
