@@ -22,7 +22,15 @@ navLinks.forEach(link => {
 });
 
 window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + 100;
+
+  if (window.scrollY < 100) {
+    removeActive();
+    const homeLink = document.querySelector('.ul-list li a[href="#home"]');
+    if (homeLink) homeLink.parentElement.classList.add('active');
+    return;
+  }
+
+  let scrollPos = window.scrollY + 150;
 
   const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
   if (nearBottom) {
@@ -32,9 +40,12 @@ window.addEventListener('scroll', () => {
   } else {
     sections.forEach(section => {
       if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-        removeActive();
         const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-        if (activeLink) activeLink.parentElement.classList.add('active');
+        if (activeLink) {
+          removeActive();
+          activeLink.parentElement.classList.add('active');
+        }
+        // Si pas de lien trouvé (ex: #about), on ne fait rien → le lien précédent reste actif
       }
     });
   }
