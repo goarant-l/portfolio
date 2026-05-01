@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Lorène Goarant</title>
-    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles.css?v=10">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -259,7 +259,6 @@
                     <li>Visual Studio Insiders 2026</li>
                     <li>VirtualBox</li>
                     <li>Proxmox</li>
-                    <li>GLPI</li>
                 </ul>
             </div>
 
@@ -470,100 +469,280 @@
         </div>
     </section>
     <!-- Certifications -->
+
     <section class="certifications" id="certifications">
+        <div class="container-certif">
+            <h1>Mes certifications</h1>
+            <hr>
+            <div class="info-pro">
+                <p>Certifications obtenues dans le cadre de ma formation et de mon apprentissage personnel.</p>
+            </div>
+            <div class="certifications-container" id="certifContainer">
+                <div class="certifications-track">
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 6</h3>
+                            <p>Travail et données personnels</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_module5_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_module5_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 5</h3>
+                            <p>Les collectivités territoriales</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_module4_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_module4_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 4</h3>
+                            <p>Le DPO et les outils de la conformité</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_module3_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_module3_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 3</h3>
+                            <p>Les responsabilités des acteurs</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_module2_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_module2_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 2</h3>
+                            <p>Les principes de la protection des données</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/cnil_RGPD_module1_certif.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/cnil_RGPD_module1_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>RGPD – Module 1</h3>
+                            <p>Le RGPD et ses notions clés</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/attestation_mooc_lorene_goarant.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>SecNumacadémie</h3>
+                            <p>MOOC ANSSI – Cybersécurité</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/certif_cisco_packet_tracer_LG.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/certif_cisco_packet_tracer_LG.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Cisco Packet Tracer</h3>
+                            <p>Cisco Networking Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
+                        <div class="cert-image">
+                            <iframe src="images/certif_linux_lorene_goarant.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                                tabindex="-1"></iframe>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Linux Unhatched</h3>
+                            <p>Cisco Networking Academy</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="certif-slider-controls">
+                <button class="certif-slider-btn cert-prev" id="certPrev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <div class="certif-slider-indicators" id="certIndicators"></div>
+                <button class="certif-slider-btn cert-next" id="certNext">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="certifications" id="certifications">
         <h1>Mes certifications</h1>
         <hr>
         <div class="info-pro">
             <p>Certifications obtenues dans le cadre de ma formation et de mon apprentissage personnel.</p>
         </div>
-        <div class="certif-container">
-            <div class="certif-card">
-                <div class="certif-icon"><i class="fa-solid fa-shield-halved fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>SecNumacadémie</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> MOOC ANSSI</p>
-                    <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité
-                        numérique : menaces, protection des données, bonnes pratiques.</p>
-                    <div class="certif-footer">
-                        <div class="certif-status-row">
-                            <span class="certif-badge obtained">Obtenue</span>
-                            <span class="separator">|</span>
-                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 27 Février 2026</p>
-                        </div>
-                        <button class="btn-certif" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
-                            <i class="fa-solid fa-eye"></i> Voir
-                        </button>
+
+        <div class="certif-carousel-wrapper">
+            <button class="certif-arrow certif-arrow-left" onclick="scrollCertif(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="certif-carousel" id="certifCarousel">
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 6</h3>
+                        <p>Travail et données personnels</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
                     </div>
                 </div>
-            </div>
-            <div class="certif-card">
-                <div class="certif-icon"><i class="fa-solid fa-globe fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Premiers pas avec Cisco Packet Tracer</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> Cisco NetworkingkAcademy</p>
-                    <p class="certif-desc">Formation en cybersécurité couvrant les fondamentaux de la sécurité
-                        numérique
-                        : menaces, protection des données, bonnes pratiques.</p>
-                    <div class="certif-footer">
-                        <div class="certif-status-row">
-                            <span class="certif-badge obtained">Obtenue</span>
-                            <span style="color: #d1d5db;">|</span>
-                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 31 Octobre 2025</p>
-                        </div>
-                        <button class="btn-certif" onclick="openCertif('images/certif_cisco_packet_tracer_LG.pdf')">
-                            <i class="fa-solid fa-eye"></i> Voir
-                        </button>
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_module5_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_module5_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 5</h3>
+                        <p>Les collectivités territoriales</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
                     </div>
                 </div>
-            </div>
-            <div class="certif-card">
-                <div class="certif-icon"><i class="fa-brands fa-linux fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Linux Unhatched</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> Cisco NetworkingkAcademy</p>
-                    <p class="certif-desc">Introduction aux systèmes Linux : navigation en ligne de commande,
-                        gestion
-                        des fichiers et des permissions, scripting de base.</p>
-                    <div class="certif-footer">
-                        <div class="certif-status-row">
-                            <span class="certif-badge obtained">Obtenue</span>
-                            <span class="separator">|</span>
-                            <p class="certif-date"><i class="fa-regular fa-calendar"></i> 14 Octobre 2025</p>
-                        </div>
-                        <button class="btn-certif" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
-                            <i class="fa-solid fa-eye"></i> Voir
-                        </button>
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_module4_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_module4_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 4</h3>
+                        <p>Le DPO et les outils de la conformité</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
                     </div>
                 </div>
-            </div>
-            <div class="certif-card placeholder-certif">
-                <div class="certif-icon"><i class="fa-solid fa-certificate fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Certification à venir</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> À définir</p>
-                    <p class="certif-desc">Cette certification sera ajoutée prochainement.</p>
-                    <span class="certif-badge pending">En cours</span>
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_module3_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_module3_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 3</h3>
+                        <p>Les responsabilités des acteurs</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
+                    </div>
                 </div>
-            </div>
-            <div class="certif-card placeholder-certif">
-                <div class="certif-icon"><i class="fa-solid fa-certificate fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Certification à venir</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> À définir</p>
-                    <p class="certif-desc">Cette certification sera ajoutée prochainement.</p>
-                    <span class="certif-badge pending">En cours</span>
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_module2_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_module2_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 2</h3>
+                        <p>Les principes de la protection des données</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
+                    </div>
                 </div>
-            </div>
-            <div class="certif-card placeholder-certif">
-                <div class="certif-icon"><i class="fa-solid fa-certificate fa-2x"></i></div>
-                <div class="certif-body">
-                    <h3>Certification à venir</h3>
-                    <p class="certif-issuer"><i class="fa-solid fa-building"></i> À définir</p>
-                    <p class="certif-desc">Cette certification sera ajoutée prochainement.</p>
-                    <span class="certif-badge pending">En cours</span>
+
+                <div class="certif-slide" onclick="openCertif('images/cnil_RGPD_module1_certif.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/cnil_RGPD_module1_certif.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>RGPD – Module 1</h3>
+                        <p>Le RGPD et ses notions clés</p>
+                        <span class="certif-badge obtained">Obtenue · 29 Avril 2026</span>
+                    </div>
                 </div>
+
+                <div class="certif-slide" onclick="openCertif('images/attestation_mooc_lorene_goarant.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/attestation_mooc_lorene_goarant.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>SecNumacadémie</h3>
+                        <p>MOOC ANSSI – Cybersécurité</p>
+                        <span class="certif-badge obtained">Obtenue · 27 Fév. 2026</span>
+                    </div>
+                </div>
+
+                <div class="certif-slide" onclick="openCertif('images/certif_cisco_packet_tracer_LG.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/certif_cisco_packet_tracer_LG.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>Cisco Packet Tracer</h3>
+                        <p>Cisco Networking Academy</p>
+                        <span class="certif-badge obtained">Obtenue · 31 Oct. 2025</span>
+                    </div>
+                </div>
+
+                <div class="certif-slide" onclick="openCertif('images/certif_linux_lorene_goarant.pdf')">
+                    <div class="certif-slide-preview">
+                        <iframe src="images/certif_linux_lorene_goarant.pdf#toolbar=0&navpanes=0&scrollbar=0"
+                            tabindex="-1"></iframe>
+                        <div class="certif-slide-overlay"><i class="fa-solid fa-eye"></i></div>
+                    </div>
+                    <div class="certif-slide-info">
+                        <h3>Linux Unhatched</h3>
+                        <p>Cisco Networking Academy</p>
+                        <span class="certif-badge obtained">Obtenue · 14 Oct. 2025</span>
+                    </div>
+                </div>
+
             </div>
+
+            <button class="certif-arrow certif-arrow-right" onclick="scrollCertif(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
+
+        <div class="certif-dots" id="certifDots">
+            <button class="certif-arrow" onclick="scrollCertif(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="certif-arrow" onclick="scrollCertif(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </section> -->
+
     </section>
     <!-- Contact -->
     <section class="contact" id="contact">

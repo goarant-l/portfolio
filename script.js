@@ -166,6 +166,88 @@ function openCertif(pdfPath) {
 //   document.body.style.overflow = 'hidden';
 // }
 
+
+// Carousel certifications
+// ===== SLIDER CERTIFICATIONS =====
+document.addEventListener('DOMContentLoaded', function () {
+  const certContainer = document.getElementById('certifContainer');
+  const certTrack = certContainer ? certContainer.querySelector('.certifications-track') : null;
+  const prevBtn = document.getElementById('certPrev');
+  const nextBtn = document.getElementById('certNext');
+  const indicatorsContainer = document.getElementById('certIndicators');
+
+  if (!certContainer || !certTrack || !prevBtn || !nextBtn || !indicatorsContainer) return;
+
+  const cards = Array.from(certTrack.children);
+  const gap = 24;
+
+  function getCardWidth() {
+    return cards[0].offsetWidth + gap;
+  }
+
+  function updateIndicators() {
+    const scrollLeft = certContainer.scrollLeft;
+    const maxScroll = certContainer.scrollWidth - certContainer.offsetWidth;
+
+    // Si on est tout à gauche → premier point
+    if (scrollLeft <= 0) {
+      activateDot(0);
+      return;
+    }
+    // Si on est tout à droite → dernier point
+    if (scrollLeft >= maxScroll - 5) {
+      activateDot(cards.length - 1);
+      return;
+    }
+
+    let activeIndex = 0;
+    let minDist = Infinity;
+    cards.forEach((card, i) => {
+      const dist = Math.abs(card.offsetLeft - certContainer.offsetLeft - scrollLeft);
+      if (dist < minDist) { minDist = dist; activeIndex = i; }
+    });
+    activateDot(activeIndex);
+  }
+
+  function activateDot(index) {
+    indicatorsContainer.querySelectorAll('.certif-indicator').forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function buildIndicators() {
+    indicatorsContainer.innerHTML = '';
+    cards.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.classList.add('certif-indicator');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        certContainer.scrollTo({ left: i * getCardWidth(), behavior: 'smooth' });
+      });
+      indicatorsContainer.appendChild(dot);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    certContainer.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    certContainer.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+  });
+
+  certContainer.addEventListener('scroll', () => {
+    clearTimeout(certContainer._scrollTimer);
+    certContainer._scrollTimer = setTimeout(updateIndicators, 50);
+  });
+
+  buildIndicators();
+  updateIndicators();
+});
+
+
+
+
 function closeCertifBtn() {
   document.getElementById('certif-modal').classList.remove('active');
   document.getElementById('certif-iframe').src = '';
@@ -180,17 +262,17 @@ function closeCertif(event) {
 }
 
 function openDemo() {
-    document.getElementById('demo-modal').classList.add('active');
-    document.body.style.overflow = 'hidden';
+  document.getElementById('demo-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeDemoBtn() {
-    document.getElementById('demo-modal').classList.remove('active');
-    document.body.style.overflow = '';
+  document.getElementById('demo-modal').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
 function closeDemo(event) {
-    if (event.target === document.getElementById('demo-modal')) {
-        closeDemoBtn();
-    }
+  if (event.target === document.getElementById('demo-modal')) {
+    closeDemoBtn();
+  }
 }
